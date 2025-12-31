@@ -1,0 +1,65 @@
+/* signup.css — signup page styles (scoped to .signup-page) */
+.signup-page {
+  --auth-bg: #f3f6f8;
+  --card-bg: #ffffff;
+  --primary: #0f172a;
+  --muted: #6b7280;
+  --accent: #06b6d4;
+  --radius: 12px;
+  --shadow: 0 12px 40px rgba(15,23,42,0.06);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  color:var(--primary);
+  background:var(--auth-bg);
+}
+
+.signup-page .auth-wrapper{ min-height:calc(100vh - 88px); display:flex; align-items:center; justify-content:center; padding:3rem 1rem; }
+.signup-page .auth-card{
+  width:100%; max-width:420px; background:var(--card-bg); border-radius:var(--radius); box-shadow:var(--shadow); padding:2.05rem; text-align:left;
+}
+.signup-page .auth-card h2{ margin:0 0 .6rem; font-size:1.35rem; }
+.signup-page .auth-card p.lead{ margin:0 0 1.25rem; color:var(--muted); }
+
+.signup-page .form-floating .form-control{ border-radius:8px; padding-right:2.6rem; transition:box-shadow .15s ease, border-color .15s ease; }
+.signup-page .form-floating .form-control:focus{ box-shadow:0 10px 30px rgba(6,182,212,0.10); border-color:var(--accent); }
+.signup-page .input-icon .form-control{ padding-right:3rem; }
+.signup-page .input-icon .bi{ right:12px; }
+
+.signup-page .btn-login{ display:inline-block; width:100%; padding:.7rem 0; border-radius:10px; border:0; background:linear-gradient(90deg,var(--accent), #ff6b6b); color:#fff; font-weight:700; transition:transform .14s ease, box-shadow .14s ease, opacity .14s ease; }
+.signup-page .btn-login:hover{ transform:translateY(-3px); box-shadow:0 14px 36px rgba(6,182,212,0.10); }
+.signup-page .btn-login:focus{ outline:3px solid rgba(6,182,212,0.10); outline-offset:3px; }
+
+.signup-page .auth-wrapper{ min-height:calc(100vh - 72px); padding:4rem 1rem; }
+.signup-page .auth-card{ width:100%; max-width:460px; padding:2.4rem; }
+.signup-page .auth-card h2{ font-size:1.5rem; margin-bottom:0.35rem; }
+
+.signup-page .auth-meta{ display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-bottom:1rem; }
+.signup-page .auth-meta .form-check{ margin-bottom:0; }
+
+.signup-page .auth-footer{ margin-top:1rem; text-align:center; color:var(--muted); }
+.signup-page .auth-footer a{ color:var(--accent); font-weight:600; }
+
+/* Small helper */
+.signup-page .input-icon{ position:relative; }
+.signup-page .input-icon .bi{ position:absolute; right:12px; top:50%; transform:translateY(-50%); color:var(--muted); cursor:pointer; }
+
+/* Responsive */
+@media (max-width:480px){ .signup-page .auth-card { padding:1.15rem; } }
+
+/* Reveal animation */
+.signup-page .auth-card{ opacity:0; transform:translateY(14px) scale(.998); transition:opacity .48s ease, transform .48s cubic-bezier(.2,.9,.2,1); }
+.signup-page .auth-card.in-view{ opacity:1; transform:translateY(0) scale(1); }
+
+/* Password strength */
+.signup-page .pw-strength{ font-size:.85rem; display:flex; align-items:center; gap:.6rem; }
+.signup-page .pw-strength .pw-bar{ width:88px; height:8px; border-radius:999px; background:#eee; position:relative; overflow:hidden; }
+.signup-page .pw-strength .pw-bar::after{ content:''; position:absolute; left:0; top:0; bottom:0; width:0; background:linear-gradient(90deg,#ff6b6b,#06b6d4); transition:width .18s ease; }
+.signup-page .pw-strength .pw-bar[data-score='0']::after{ width:12%; background:#f43f5e; }
+.signup-page .pw-strength .pw-bar[data-score='1']::after{ width:30%; background:#f97316; }
+.signup-page .pw-strength .pw-bar[data-score='2']::after{ width:50%; background:#f59e0b; }
+.signup-page .pw-strength .pw-bar[data-score='3']::after{ width:76%; background:#06b6d4; }
+.signup-page .pw-strength .pw-bar[data-score='4']::after{ width:100%; background:#06b981; }
+
+/* Simple modal fallback */
+.signup-page .simple-modal{ position:fixed; inset:0; background:rgba(0,0,0,.45); display:flex; align-items:center; justify-content:center; z-index:2000; }
+.signup-page .simple-modal-inner{ background:#fff; padding:1.3rem; border-radius:10px; width:min(560px,92%); box-shadow:0 20px 60px rgba(2,6,23,.35); }
+.signup-page .simple-modal .btn { margin-top:1rem; }

@@ -1,0 +1,18 @@
+/* favorites.css — styles scoped to favorites page */
+.favorites-page .card {
+  border-radius: 0.6rem;
+  box-shadow: 0 8px 22px rgba(15,23,42,0.06);
+}
+.favorites-page .card img {
+  width: 84px;
+  height: 84px;
+  object-fit: cover;
+  border-radius: .35rem;
+}
+.btn-fav { transition: transform .12s ease, background-color .12s ease; }
+.btn-fav.btn-danger { background-color: #dc3545; border-color: #dc3545; color: #fff; }
+.favorites-page .btn-add-from-fav { min-width: 120px; }
+.favorites-page .mb-3.d-flex { gap: 12px; }
+@media (max-width: 576px) {
+  .favorites-page .card { flex-direction: row; }
+}

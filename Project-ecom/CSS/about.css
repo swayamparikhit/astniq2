@@ -1,0 +1,49 @@
+/* About page styles */
+:root{
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --primary: #0f172a; /* near-black */
+  --accent: #ff6b6b;
+  --muted: #6b7280;
+}
+
+html,body{
+  height:100%;
+  background:var(--bg);
+  color:var(--primary);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* Navbar rules moved to shared 'navbar.css' */
+
+/* Hero / Intro */
+section.py-5{ padding-top:4.5rem !important; padding-bottom:4.5rem !important; }
+section h2{ font-size:2rem; letter-spacing:.2px; }
+section .lead{ color:var(--muted); font-size:1.05rem; }
+
+/* Brand values */
+.row.text-center .bi{
+  color:var(--accent);
+  background: linear-gradient(90deg, rgba(255,107,107,0.08), transparent);
+  border-radius:12px;
+  padding:.4rem;
+  display:inline-block;
+}
+.row.text-center h5{ margin-top:.6rem; margin-bottom:.4rem; font-weight:600; }
+.row.text-center p{ color:var(--muted); }
+
+/* Footer */
+footer{ background:#0b1220; color:#cbd5e1; }
+footer small{ opacity:.9; }
+
+/* Responsive tweaks */
+@media (max-width:768px){
+  section h2{ font-size:1.6rem; }
+  .row.text-center .bi{ font-size:1.6rem; padding:.5rem; }
+}
+
+/* Small utilities */
+.badge{ font-weight:600; }
+
+/* Accessibility focus states */
+a:focus{ outline:3px solid rgba(99,102,241,0.12); outline-offset:3px; }

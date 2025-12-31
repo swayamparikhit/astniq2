@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | SWANK &amp; SWAN</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons (IMPORTANT) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Shared navbar styles -->
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+    <!-- ===== HEADER / NAVBAR ===== -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+            <div class="container">
+
+                <!-- Brand -->
+                <a class="navbar-brand fw-bold" href="index.html">SWANK &amp; SWAN</a>
+
+                <!-- Toggle Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#mainNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNavbar">
+
+                    <ul class="navbar-nav mx-auto nav-center">
+                      <li class="nav-item"><a class="nav-link" href="products.html">SHOP ALL</a></li>
+                      <li class="nav-item"><a class="nav-link" href="products.html">MEN</a></li>
+                      <li class="nav-item"><a class="nav-link" href="products.html">WOMEN</a></li>
+                      <li class="nav-item"><a class="nav-link" href="products.html">UNISEX</a></li>
+                      <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+                      <li class="nav-item"><a class="nav-link active fw-semibold" href="contact.html">CONTACT</a></li>
+                    </ul>
+
+                    <ul class="navbar-nav ms-auto align-items-center">
+                      <li class="nav-item me-3">
+                        <a class="nav-link position-relative" href="favorites.html"><i class="bi bi-heart fs-5"></i>
+                          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="badge-fav">0</span>
+                        </a>
+                      </li>
+                      <li class="nav-item me-3">
+                        <a class="nav-link" href="profile.html"><i class="bi bi-person fs-5"></i></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link position-relative" href="cart.html"><i class="bi bi-bag fs-5"></i>
+                          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark text-light" id="badge-cart">0</span>
+                        </a>
+                      </li>
+                    </ul>
+
+                </div>
+
+                        <!-- Account -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link nav-user" href="login.html" id="navUserLink" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Account">
+                                <i class="bi bi-person-circle fs-5 nav-user-icon" aria-hidden="true"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" id="navUserMenu">
+                                <li><a class="dropdown-item" href="login.html">Sign in</a></li>
+                                <li><a class="dropdown-item" href="signup.html">Sign up</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="py-5">
+        <div class="container">
+
+            <div class="text-center mb-5">
+                <h2>Contact Us</h2>
+                <p class="text-muted">We’d love to hear from you</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" placeholder="Enter your name">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" class="form-control" placeholder="Enter your email">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-control" rows="4"
+                                placeholder="Write your message"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-dark w-100">
+                            Send Message
+                        </button>
+                    </form>
+
+                </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="row text-center mt-5">
+                <div class="col-md-4">
+                    <p><strong>Email:</strong> support@swankandswan.com</p>
+                </div>
+
+                <div class="col-md-4">
+                    <p><strong>Phone:</strong> +91 12345 67891</p>
+                </div>
+
+                <div class="col-md-4">
+                    <p><strong>Location:</strong> India</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-dark text-light text-center py-3 mt-5">
+        <small>© 2025 SWANK &amp; SWAN. All rights reserved.</small>
+    </footer>
+
+    <!-- Shared site JS -->
+    <script src="../JS/site.js" defer></script>
+</body>
+</html>
